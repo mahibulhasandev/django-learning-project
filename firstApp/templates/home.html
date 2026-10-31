@@ -1,0 +1,58 @@
+{% load static tailwind_tags %}
+
+{% tailwind_css %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Website</title>
+
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'static/style.css' %}">
+    <script src="{% static 'scripts.js' %}" defer></script>
+</head>
+
+
+
+<!-- {% load static tailwind_tags %}
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Website</title>
+    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+    <script src="{% static 'scripts.js' %}" defer></script>
+</head> -->
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+        <h1 class="text-3xl font-bold text-blue-600 ">
+            Welcome to Django!
+        </h1>
+
+        <p class="mt-4 text-gray-600">
+            My first Django and Tailwind CSS website.
+        </p>
+        <h1 class="bg-red-500 text-white text-3xl p-8">
+            Tailwind Test
+        </h1>
+        <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+
+        <button class="mt-6 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+            Get Started
+        </button>
+    </div>
+
+    <button onclick="sayHello()">Click Me</button>
+
+</body>
+
+</html>

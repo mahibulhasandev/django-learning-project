@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Item{% endblock title %}
+
+{% block body %}
+    <h1 class="text-center justify-items-center">Item List </h1>
+    <p class="text-center">This is show the item </p>
+
+<div class="grid grid-cols-3 gap-3 m-4">
+
+    {% for item in allItem %}
+    <div class="bg-green-800" p-5>
+        <img class="rounded" src="{{ item.image.url }}" alt="{{ item.name }}" >
+        <h4 class="text-5xl font-bold">{{ item.name }}</h4>
+        <a href="{% url 'item_details' item.id %}">
+            <button type="button"
+            class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-white
+            bg-orange-600 hover:bg-orange-600
+             focus:outline-none focus:ring-2 focus:ring-offset-2"
+            >
+
+                {{item.type}} - {{item.id}}
+            </button>
+        </a>
+    </div>
+    {% empty %}
+        <p>No items found.</p>
+    {% endfor %}
+
+    
+</div>
+{% endblock body %}
